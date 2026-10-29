@@ -1,0 +1,49 @@
+:root{--bg:#F3F8FB;--surf:#fff;--ink:#14213D;--mut:#576781;--line:#D9E4EE;--acc:#0B8FA0;--accink:#fff;--tag:#F6C945;--tagink:#3A2E00;--ok:#25885B;--err:#BE3434;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0D1526;--surf:#15233B;--ink:#E8EEF7;--mut:#9DAEC6;--line:#263752;--acc:#3CC3D3;--accink:#06222A;--ok:#4CC58C;--err:#F08080;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0D1526;--surf:#15233B;--ink:#E8EEF7;--mut:#9DAEC6;--line:#263752;--acc:#3CC3D3;--accink:#06222A;--ok:#4CC58C;--err:#F08080;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Avenir Next","Segoe UI",system-ui,sans-serif}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.wrap{max-width:720px;margin:0 auto;padding:16px 16px 120px}
+header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 0 16px}
+.brand{font-size:22px;font-weight:800;letter-spacing:.02em}
+.brand small{display:block;font-size:13px;font-weight:500;color:var(--mut);letter-spacing:0}
+.who{font-size:14px;color:var(--mut);text-align:right}
+h2{font-size:20px;margin:20px 0 10px}
+.tabs{display:flex;gap:6px;border-bottom:2px solid var(--line);margin-bottom:8px}
+.tabs button{background:none;border:0;padding:10px 14px;font-weight:600;color:var(--mut);border-bottom:3px solid transparent;margin-bottom:-2px;cursor:pointer}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--acc)}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.name{font-weight:700}.mut{color:var(--mut);font-size:14px}
+.price{font-variant-numeric:tabular-nums;font-weight:700}
+.btn{background:var(--acc);color:var(--accink);border:0;border-radius:8px;padding:10px 16px;font-weight:700;cursor:pointer;min-height:44px}
+.btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn.sm{padding:6px 12px;min-height:36px;font-size:14px}
+.btn.del{background:transparent;color:var(--err);border:1.5px solid var(--err)}
+.qty{display:flex;align-items:center;gap:4px}
+.qty button{width:40px;height:40px;border-radius:8px;border:1.5px solid var(--line);background:var(--surf);font-size:20px;cursor:pointer}
+.qty output{min-width:36px;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+label{display:block;font-weight:600;margin:12px 0 4px;font-size:14px}
+input,select{width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;background:var(--surf);min-height:44px}
+.msg{border-radius:8px;padding:10px 14px;margin:8px 0;font-weight:600;border:1.5px solid}
+.msg.ok{color:var(--ok);border-color:var(--ok)}.msg.err{color:var(--err);border-color:var(--err)}
+.basket{position:fixed;left:0;right:0;bottom:0;background:var(--surf);border-top:2px solid var(--line);padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.basket .in{max-width:720px;margin:0 auto}
+.basket input{margin:8px 0}
+.off{opacity:.55}
+.line{list-style:none;display:flex;margin:14px 0 4px;padding:0;position:relative}
+.line::before{content:"";position:absolute;left:10%;right:10%;top:9px;height:2px;background:var(--line)}
+.line li{flex:1;text-align:center;font-size:12px;color:var(--mut);position:relative}
+.line li::before{content:"";display:block;width:18px;height:18px;margin:0 auto 4px;border-radius:5px 5px 9px 9px;background:var(--surf);border:2px solid var(--line);position:relative}
+.line li.done::before{background:var(--acc);border-color:var(--acc)}
+.line li.now::before{background:var(--tag);border-color:var(--tag)}
+.line li.now{color:var(--ink);font-weight:700}
+.tag{display:inline-block;background:var(--tag);color:var(--tagink);font-weight:700;font-size:13px;padding:2px 10px;border-radius:6px 6px 6px 14px}
+table{width:100%;border-collapse:collapse}
+.empty{text-align:center;color:var(--mut);padding:28px 8px}
+.note{font-size:13px;color:var(--mut);margin-top:28px}
+@media (prefers-reduced-motion:no-preference){.btn{transition:filter .15s}.btn:hover{filter:brightness(1.08)}}
