@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="id" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Shabil Laundry – Cuci, setrika, jemput &amp; antar</title>
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/landing.css" />
+  </head>
+  <script>
+    (function () {
+      var rows = document.getElementById("rows");
+      if (!rows || typeof SERVICES === "undefined") return;
+      var on = SERVICES.filter(function (s) {
+        return s.a;
+      });
+      var hr = rows.closest("table").querySelector("thead tr");
+      var th = document.createElement("th");
+      th.textContent = "Estimasi";
+      hr.insertBefore(th, hr.lastElementChild);
+      [].forEach.call(rows.rows, function (tr, i) {
+        var td = document.createElement("td");
+        td.textContent = on[i].e + " hari";
+        tr.insertBefore(td, tr.lastElementChild);
+      });
+      [].forEach.call(
+        document.querySelectorAll("#layanan .sv"),
+        function (c, i) {
+          if (!SERVICES[i]) return;
+          var s = document.createElement("span");
+          s.className = "sv-est";
+          s.innerHTML =
+            '<svg class="ic"><use href="#clock"/></svg>Estimasi ' +
+            SERVICES[i].e +
+            " hari";
+          c.appendChild(s);
+        },
+      );
+    })();
+  </script>
+  <body>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="truck" viewBox="0 0 24 24">
+        <path d="M3 7h11v9H3zM14 10h4l3 3v3h-7" />
+        <circle cx="7" cy="18" r="1.8" />
+        <circle cx="17" cy="18" r="1.8" />
+      </symbol>
+      <symbol id="clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v5l3 2" />
+      </symbol>
+      <symbol id="tag" viewBox="0 0 24 24">
+        <path d="M4 4h8l8 8-8 8-8-8z" />
+        <circle cx="8.5" cy="8.5" r="1.2" />
+      </symbol>
+      <symbol id="shield" viewBox="0 0 24 24">
+        <path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z" />
+        <path d="M9 12l2 2 4-4" />
+      </symbol>
+      <symbol id="cal" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="16" rx="2" />
+        <path d="M3 10h18M8 3v4M16 3v4" />
+      </symbol>
+      <symbol id="wash" viewBox="0 0 24 24">
+        <rect x="4" y="3" width="16" height="18" rx="2" />
+        <circle cx="12" cy="13" r="4" />
+        <path d="M8 7h.01M11 7h.01" />
+      </symbol>
+      <symbol id="shirt" viewBox="0 0 24 24">
+        <path d="M8 3 3 6l2 4 3-1v11h8V9l3 1 2-4-5-3a4 4 0 0 1-8 0z" />
+      </symbol>
+      <symbol id="iron" viewBox="0 0 24 24">
+        <path d="M3 17h18c0-5-4-9-9-9H8zM8 13h5" />
+      </symbol>
+      <symbol id="hang" viewBox="0 0 24 24">
+        <path d="M12 7a2 2 0 1 0-2-2M12 7v2L3 16h18l-9-7" />
+      </symbol>
+      <symbol id="blk" viewBox="0 0 24 24">
+        <rect x="3" y="6" width="18" height="12" rx="2" />
+        <path d="M3 10h18M8 6v12" />
+      </symbol>
+      <symbol id="check" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M8 12l3 3 5-6" />
+      </symbol>
+      <symbol id="phone" viewBox="0 0 24 24">
+        <path
+          d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"
+        />
+      </symbol>
+      <symbol id="mail" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <path d="M3 7l9 6 9-6" />
+      </symbol>
+      <symbol id="pin" viewBox="0 0 24 24">
+        <path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z" />
+        <circle cx="12" cy="10" r="2.5" />
+      </symbol>
+      <symbol id="arr" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </symbol>
+    </svg>
+
+    <div class="top">
+      <div class="wrap">
+        <div class="l">
+          <span
+            ><svg class="ic"><use href="#truck" /></svg>Jemput &amp; antar ke
+            alamat Anda</span
+          ><span
+            ><svg class="ic"><use href="#clock" /></svg>Pantau status pesanan
+            online</span
+          ><span
+            ><svg class="ic"><use href="#check" /></svg>Buka setiap hari,
+            07.00–21.00 WIB</span
+          >
+        </div>
+        <a data-wa href="#" target="_blank" rel="noopener"
+          ><svg class="ic"><use href="#phone" /></svg>WhatsApp 089637242034</a
+        >
+      </div>
+    </div>
+
+    <header class="nav">
+      <div class="wrap">
+        <a class="logo" href="#atas"
+          ><b
+            ><svg class="ic"><use href="#wash" /></svg
+          ></b>
+          <span>Shabil<small>LAUNDRY SERVICE</small></span></a
+        >
+        <nav aria-label="Menu utama">
+          <a href="#atas">Beranda</a><a href="#layanan">Layanan</a
+          ><a href="#harga">Harga</a><a href="#cara">Cara Kerja</a
+          ><a href="#kontak">Kontak</a>
+        </nav>
+        <div class="act">
+          <a class="link" href="app.html">Masuk</a
+          ><a class="btn sm" href="app.html?mode=daftar">Pesan Sekarang</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="atas">
+      <div class="hero">
+        <div class="wrap">
+          <div>
+            <h1>Cucian Bersih,<em>Hidup Lebih Ringan!</em></h1>
+            <p class="lead">
+              Layanan laundry kiloan dan satuan dengan jemput–antar, harga
+              jelas, dan status pesanan yang bisa dipantau online.
+            </p>
+            <ul class="mini">
+              <li>
+                <svg class="ic"><use href="#truck" /></svg>Jemput &amp; antar
+              </li>
+              <li>
+                <svg class="ic"><use href="#clock" /></svg>Status bisa dipantau
+              </li>
+              <li>
+                <svg class="ic"><use href="#tag" /></svg>Harga jelas
+              </li>
+              <li>
+                <svg class="ic"><use href="#cal" /></svg>Pesan kapan saja
+              </li>
+            </ul>
+            <div class="cta">
+              <a class="btn" href="app.html?mode=daftar"
+                >Pesan Sekarang <svg class="ic"><use href="#arr" /></svg></a
+              ><a class="btn o" href="#cara">Cara Kerja</a>
+            </div>
+            <p class="have">Sudah punya akun? <a href="app.html">Masuk</a></p>
+          </div>
+          <img
+            class="art"
+            src="img/laundry.jpg"
+            alt="Tumpukan pakaian bersih dan terlipat"
+            width="500"
+            height="450"
+            style="border-radius: 20px"
+          />
+        </div>
+      </div>
+
+      <section id="layanan">
+        <div class="wrap">
+          <span class="eyebrow">LAYANAN KAMI</span>
+          <h2 class="t">Layanan Laundry</h2>
+          <div class="grid5">
+            <div class="sv">
+              <svg class="ic"><use href="#wash" /></svg>
+              <h3>Cuci Kiloan</h3>
+              <p>Dicuci dan dikeringkan, dihitung per kilo.</p>
+            </div>
+            <div class="sv">
+              <svg class="ic"><use href="#shirt" /></svg>
+              <h3>Cuci &amp; Setrika</h3>
+              <p>Bersih, wangi, dan rapi siap dipakai.</p>
+            </div>
+            <div class="sv">
+              <svg class="ic"><use href="#iron" /></svg>
+              <h3>Setrika Saja</h3>
+              <p>Untuk pakaian yang sudah bersih tapi kusut.</p>
+            </div>
+            <div class="sv">
+              <svg class="ic"><use href="#hang" /></svg>
+              <h3>Cuci Jas</h3>
+              <p>Perawatan khusus untuk jas, per potong.</p>
+            </div>
+            <div class="sv">
+              <svg class="ic"><use href="#blk" /></svg>
+              <h3>Cuci Selimut</h3>
+              <p>Selimut dan bedcover bersih, per potong.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="harga" style="padding-top: 0">
+        <div class="wrap">
+          <div class="price">
+            <aside>
+              <small>HARGA KAMI</small>
+              <h3>Daftar Harga Laundry</h3>
+              <p>Tarif per kilo atau per potong.</p>
+            </aside>
+            <div class="tw">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Layanan</th>
+                    <th>Satuan</th>
+                    <th>Harga</th>
+                  </tr>
+                </thead>
+                <tbody id="rows"></tbody>
+              </table>
+            </div>
+          </div>
+          <p class="note">
+            * Total akhir dikonfirmasi saat cucian dijemput dan ditimbang.
+          </p>
+        </div>
+      </section>
+
+      <section id="cara" style="padding-top: 20px">
+        <div class="wrap">
+          <span class="eyebrow">CARA KERJA</span>
+          <h2 class="t">4 Langkah Mudah</h2>
+          <ol class="steps">
+            <li>
+              <svg class="ic"><use href="#cal" /></svg>
+              <div>
+                <small>Langkah 1</small>
+                <h3>Pesan</h3>
+                <p>Daftar, pilih layanan, dan isi alamat.</p>
+              </div>
+            </li>
+            <li>
+              <svg class="ic"><use href="#truck" /></svg>
+              <div>
+                <small>Langkah 2</small>
+                <h3>Kami Jemput</h3>
+                <p>Kurir mengambil cucian di alamat Anda.</p>
+              </div>
+            </li>
+            <li>
+              <svg class="ic"><use href="#wash" /></svg>
+              <div>
+                <small>Langkah 3</small>
+                <h3>Kami Cuci</h3>
+                <p>Dicuci dengan teliti, statusnya bisa dipantau.</p>
+              </div>
+            </li>
+            <li>
+              <svg class="ic"><use href="#check" /></svg>
+              <div>
+                <small>Langkah 4</small>
+                <h3>Kami Antar</h3>
+                <p>Cucian bersih kembali ke tangan Anda.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="promo">
+        <div class="wrap">
+          <div>
+            <span
+              ><h2>Cucian menumpuk? Serahkan ke kami.</h2>
+              <p>Buat akun, pilih layanan, dan kami jemput cuciannya.</p></span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="feat">
+            <div>
+              <svg class="ic"><use href="#tag" /></svg>
+              <p style="margin: 0">
+                <b>Harga jelas</b><span>Tarif per kilo atau per potong</span>
+              </p>
+            </div>
+            <div>
+              <svg class="ic"><use href="#clock" /></svg>
+              <p style="margin: 0">
+                <b>Pantau status</b
+                ><span>Menunggu, dijemput, diproses, diantar, selesai</span>
+              </p>
+            </div>
+            <div>
+              <svg class="ic"><use href="#truck" /></svg>
+              <p style="margin: 0">
+                <b>Jemput &amp; antar</b><span>Langsung ke alamat Anda</span>
+              </p>
+            </div>
+            <div>
+              <svg class="ic"><use href="#shield" /></svg>
+              <p style="margin: 0">
+                <b>Cucian tercatat</b
+                ><span>Setiap pesanan punya nomor sendiri</span>
+              </p>
+            </div>
+            <div>
+              <svg class="ic"><use href="#cal" /></svg>
+              <p style="margin: 0">
+                <b>Pesan kapan saja</b
+                ><span>Buat pesanan online, tanpa antre</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="kontak">
+      <div class="wrap">
+        <div class="cols">
+          <div>
+            <a class="logo" href="#atas"
+              ><b
+                ><svg class="ic"><use href="#wash" /></svg></b
+              ><span>Shabil<small>LAUNDRY SERVICE</small></span></a
+            >
+            <p>Layanan laundry dengan jemput dan antar ke alamat Anda.</p>
+          </div>
+          <div>
+            <h4>Menu</h4>
+            <ul>
+              <li><a href="#atas">Beranda</a></li>
+              <li><a href="#layanan">Layanan</a></li>
+              <li><a href="#harga">Harga</a></li>
+              <li><a href="#cara">Cara Kerja</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Layanan</h4>
+            <ul id="fsv"></ul>
+          </div>
+          <div class="c">
+            <h4>Kontak</h4>
+            <ul>
+              <li>
+                <svg class="ic"><use href="#phone" /></svg>0896-3724-2034
+              </li>
+              <li>
+                <svg class="ic"><use href="#mail" /></svg
+                >ShabilLaundry@gmail.com
+              </li>
+              <li>
+                <svg class="ic"><use href="#pin" /></svg>Jl. Muara Pasar
+              </li>
+              <li>
+                <a href="app.html">Masuk</a> ·
+                <a href="app.html?mode=daftar">Daftar</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="copy">© 2026 Shabil Laundry. Semua hak dilindungi.</div>
+      </div>
+    </footer>
+
+    <script src="js/services.js"></script>
+    <script>
+      (function () {
+        var NO = "6289637242034"; // ganti nomor WhatsApp (awali 62, tanpa +)
+        var rp = function (n) {
+          return "Rp " + Number(n).toLocaleString("id-ID");
+        };
+        var on = SERVICES.filter(function (s) {
+          return s.a;
+        });
+        document.getElementById("rows").innerHTML = on
+          .map(function (s) {
+            return (
+              "<tr><td>" +
+              s.n +
+              "</td><td>per " +
+              s.s +
+              "</td><td>" +
+              rp(s.h) +
+              "</td></tr>"
+            );
+          })
+          .join("");
+        document.getElementById("fsv").innerHTML = on
+          .map(function (s) {
+            return "<li>" + s.n + "</li>";
+          })
+          .join("");
+        var u =
+          "https://wa.me/" +
+          NO +
+          "?text=" +
+          encodeURIComponent("Halo Shabil Laundry, saya mau tanya layanan.");
+        [].forEach.call(document.querySelectorAll("[data-wa]"), function (a) {
+          a.href = u;
+        });
+      })();
+    </script>
+  </body>
+</html>

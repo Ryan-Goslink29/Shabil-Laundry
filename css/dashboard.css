@@ -1,0 +1,275 @@
+#app.admin-mode {
+  max-width: 1200px;
+  padding: 14px 14px 24px;
+}
+.adm {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  min-height: calc(100vh - 40px);
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--bg);
+}
+.side {
+  background: #0a0d14;
+  color: #fff;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.side .logo {
+  font-size: 22px;
+  margin: 0 8px 22px;
+}
+.side .nv {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: 0;
+  color: #c8d0dc;
+  padding: 11px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+}
+.side .nv[aria-current="page"] {
+  background: #2e6cf6;
+  color: #fff;
+}
+.side .out {
+  margin-top: auto;
+  background: #2e6cf6;
+  color: #fff;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 16px;
+  font-weight: 700;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+.mainc {
+  padding: 18px 20px;
+  min-width: 0;
+}
+.tb {
+  background: #2e6cf6;
+  color: #fff;
+  border-radius: 14px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.tb .sr {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+  padding: 0 14px;
+}
+.tb input {
+  background: none;
+  border: 0;
+  color: #fff;
+  min-height: 40px;
+  outline: 0;
+  padding: 0;
+}
+.tb input::placeholder {
+  color: rgba(255, 255, 255, 0.85);
+}
+.tb .usr {
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  padding-left: 14px;
+}
+.tb .un small {
+  color: rgba(255, 255, 255, 0.8);
+}
+.dgrid {
+  display: grid;
+  grid-template-columns: 1fr 290px;
+  gap: 14px;
+  align-items: start;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+.st3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.sc {
+  background: var(--surf);
+  border: 1.5px solid var(--ink);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+.sc.hl {
+  background: #2e6cf6;
+  border-color: #2e6cf6;
+  color: #fff;
+}
+.sc b {
+  display: block;
+  font-size: 20px;
+}
+.sc span {
+  font-size: 12px;
+  opacity: 0.8;
+}
+.cd {
+  background: var(--surf);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+}
+.cd h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+.cd svg.ar {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.dn {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 6px auto 14px;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.dn::before {
+  content: "";
+  position: absolute;
+  inset: 26px;
+  border-radius: 50%;
+  background: var(--surf);
+}
+.dn div {
+  position: relative;
+  text-align: center;
+  line-height: 1.2;
+}
+.dn small {
+  display: block;
+  font-size: 11px;
+  color: var(--mut);
+}
+.dn b {
+  font-size: 22px;
+}
+.lg {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+.lg li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 0;
+}
+.lg i {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+.lg b {
+  margin-left: auto;
+}
+.br {
+  margin: 10px 0;
+  font-size: 13px;
+}
+.br .r {
+  display: flex;
+  justify-content: space-between;
+}
+.br .t {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--line);
+  margin-top: 4px;
+}
+.br .t i {
+  display: block;
+  height: 100%;
+  border-radius: 3px;
+  background: var(--acc);
+}
+@media (max-width: 860px) {
+  .adm {
+    grid-template-columns: 1fr;
+  }
+  .side {
+    flex-direction: row;
+    overflow: auto;
+    padding: 12px;
+    align-items: center;
+  }
+  .side .logo {
+    margin: 0 8px 0 0;
+  }
+  .side .out {
+    margin: 0 0 0 auto;
+  }
+  .dgrid {
+    grid-template-columns: 1fr;
+  }
+  .st3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.side a.logo {
+  color: inherit;
+  text-decoration: none;
+}
+
+.inc .st3 {
+  margin-bottom: 12px;
+}
+.inc .sc b {
+  font-size: 17px;
+}
+
+/* Logo sidebar admin: sama dengan logo di landing page, pelanggan, dan kurir */
+.side .p-logo {
+  margin: 0 4px 22px;
+  font-size: 1.05rem;
+  white-space: nowrap;
+}
+.side .p-logo small {
+  color: #9db0c8;
+}
+@media (min-width: 861px) {
+  .adm {
+    grid-template-columns: 232px 1fr;
+  }
+}
+@media (max-width: 860px) {
+  .side .p-logo {
+    margin: 0 8px 0 0;
+  }
+  .side .p-logo small {
+    display: none;
+  }
+}

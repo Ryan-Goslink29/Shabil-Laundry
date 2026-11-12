@@ -1,0 +1,476 @@
+/* Tampilan area pelanggan. Dimuat setelah style.css, theme.css, dan dashboard.css. */
+.dashboard-pelanggan {
+  max-width: 1100px;
+}
+.p-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0 18px;
+}
+.p-logo {
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.15rem;
+  line-height: 1.1;
+}
+.p-logo small {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--mut);
+}
+.p-who {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.p-name {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+.p-hero {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  border-radius: 24px;
+  padding: 30px 32px;
+  margin: 4px 0 18px;
+  background: linear-gradient(120deg, #0a3d9c, #2e6cf6 60%, #5b9bff);
+}
+.p-hero > div {
+  position: relative;
+}
+.pb {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+}
+.pb1 {
+  width: 220px;
+  height: 220px;
+  right: -60px;
+  top: -80px;
+}
+.pb2 {
+  width: 110px;
+  height: 110px;
+  right: 150px;
+  bottom: -50px;
+}
+.p-hero .eyebrow {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+.p-hero h1 {
+  margin: 4px 0 6px;
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  line-height: 1.15;
+}
+.p-hero p {
+  margin: 0;
+  opacity: 0.92;
+  max-width: 46ch;
+}
+.p-cta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+.p-hero .btn {
+  background: #fff;
+  color: #1b57d6;
+  border: 2px solid #fff;
+}
+.p-hero .btn.ghost {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+.dashboard-pelanggan .stat-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  padding: 18px 20px 18px 24px;
+  box-shadow: 0 6px 18px rgba(20, 33, 61, 0.06);
+}
+.dashboard-pelanggan .stat-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: var(--acc);
+}
+.dashboard-pelanggan .stat-1::before {
+  background: var(--tag);
+}
+.dashboard-pelanggan .stat-2::before {
+  background: var(--ok);
+}
+.dashboard-pelanggan .stat-0 strong {
+  color: var(--acc);
+}
+.dashboard-pelanggan .stat-card strong {
+  font-size: 34px;
+}
+.p-order {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 22px;
+  align-items: start;
+}
+.p-main h2 {
+  margin: 6px 0 4px;
+}
+.sv2-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+.sv2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--surf);
+  border: 2px solid var(--line);
+  border-radius: 18px;
+  padding: 18px;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+.sv2:hover {
+  border-color: color-mix(in srgb, var(--c) 55%, var(--line));
+}
+.sv2.on {
+  border-color: var(--c);
+  background: color-mix(in srgb, var(--c) 5%, var(--surf));
+  box-shadow: 0 10px 26px color-mix(in srgb, var(--c) 22%, transparent);
+}
+.sv2 .ib {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--c) 14%, transparent);
+  color: var(--c);
+}
+.sv2-t p {
+  margin: 2px 0 8px;
+  font-size: 13px;
+  color: var(--mut);
+}
+.sv2 .pp {
+  background: color-mix(in srgb, var(--c) 12%, transparent);
+  color: var(--c);
+  font-weight: 700;
+}
+.sv2-add {
+  align-self: flex-start;
+  background: transparent;
+  color: var(--c);
+  border: 2px solid var(--c);
+}
+.sv2-add:hover {
+  background: var(--c);
+  color: #fff;
+}
+.sv2 .qty {
+  align-self: flex-start;
+  background: var(--bg);
+  border-radius: 12px;
+  padding: 4px;
+}
+.sv2 .qty button {
+  border: 0;
+  background: var(--surf);
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  font-weight: 700;
+}
+.sv2 .qty output {
+  min-width: 44px;
+}
+.sv2 .ck {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--c);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+.p-sum {
+  position: sticky;
+  top: 16px;
+  background: var(--surf);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 12px 30px rgba(20, 33, 61, 0.08);
+}
+.p-sum h3 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+.p-li {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px dashed var(--line);
+  font-size: 14px;
+}
+.p-li span {
+  color: var(--mut);
+}
+.p-li b {
+  white-space: nowrap;
+}
+.p-none {
+  padding: 18px 8px;
+  text-align: center;
+  color: var(--mut);
+  font-size: 14px;
+  background: var(--bg);
+  border-radius: 12px;
+}
+.p-tot {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 14px 0 4px;
+}
+.p-tot b {
+  font-size: 1.6rem;
+}
+.p-sum label {
+  margin-top: 14px;
+}
+.p-sum textarea {
+  width: 100%;
+  min-height: 84px;
+  padding: 10px 12px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background: var(--surf);
+  font: inherit;
+  resize: vertical;
+}
+.p-sum .mut {
+  margin: 8px 0 0;
+  font-size: 12px;
+}
+.p-sum .btn.go {
+  width: 100%;
+  margin-top: 12px;
+  min-height: 50px;
+}
+.p-bar {
+  display: none;
+}
+.pc {
+  background: var(--surf);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin: 12px 0;
+  box-shadow: 0 6px 18px rgba(20, 33, 61, 0.05);
+}
+.pc-h {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.pc-id {
+  font-weight: 800;
+}
+.pc-d {
+  color: var(--mut);
+  font-size: 13px;
+}
+.badge {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  background: color-mix(in srgb, var(--b) 16%, transparent);
+  color: var(--b);
+}
+.b-Menunggu {
+  --b: #c88712;
+}
+.b-Dijemput {
+  --b: #2e6cf6;
+}
+.b-Diproses {
+  --b: #7c5ce7;
+}
+.b-Diantar {
+  --b: #14a89a;
+}
+.b-Selesai {
+  --b: #25885b;
+}
+.pc-i {
+  margin: 10px 0 4px;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+.pc-i li {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 3px 0;
+}
+.pc-f {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--line);
+}
+.pc-f .mut {
+  font-size: 13px;
+}
+@media (max-width: 900px) {
+  .p-order {
+    grid-template-columns: 1fr;
+  }
+  .p-sum {
+    position: static;
+  }
+  .p-bar {
+    display: flex;
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    z-index: 5;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background: var(--surf);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 10px 12px 10px 18px;
+    box-shadow: 0 14px 40px rgba(20, 33, 61, 0.22);
+  }
+  .p-bar small {
+    display: block;
+    color: var(--mut);
+    font-size: 12px;
+  }
+  .p-bar b {
+    font-size: 1.05rem;
+  }
+}
+@media (max-width: 560px) {
+  .sv2-grid {
+    grid-template-columns: 1fr;
+  }
+  .p-hero {
+    padding: 24px 20px;
+  }
+  .p-name {
+    display: none;
+  }
+}
+
+/* Lebarkan wadah halaman pelanggan (sebelumnya terkunci 720px oleh .wrap di style.css) */
+#app.pelanggan-mode {
+  max-width: 1100px;
+  padding: 14px 14px 120px;
+}
+.sv2 .pp,
+.sv2-add {
+  white-space: nowrap;
+}
+
+.p-sum input {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background: var(--surf);
+  font: inherit;
+}
+
+/* Estimasi waktu layanan */
+.sv2-m {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.sv2-e {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--mut);
+  background: var(--bg);
+  white-space: nowrap;
+}
+.sv2-e svg,
+.pc-e svg,
+.p-est > svg {
+  width: 15px;
+  height: 15px;
+  flex: none;
+}
+.p-est {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 12px 0 0;
+  padding: 12px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--acc) 8%, transparent);
+  color: var(--acc);
+}
+.p-est b {
+  color: var(--ink);
+  font-size: 14px;
+}
+.p-est small {
+  display: block;
+  color: var(--mut);
+  font-size: 12px;
+}
+.pc-e {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--mut);
+}

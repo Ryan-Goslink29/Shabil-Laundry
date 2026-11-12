@@ -1,0 +1,30 @@
+/* Papan tugas, pegawai, dan dashboard karyawan. Dimuat setelah kurir.css dan sebelum glass.css. */
+.kfs{grid-template-columns:repeat(auto-fit,minmax(70px,1fr))}
+.k-jemput{--kc:#b8730a}
+.k-antar{--kc:#14a89a}
+.k-cuci{--kc:#0f9fb0}
+.k-setrika{--kc:#7c5ce7}
+.kr-hero.tl{background:linear-gradient(120deg,#0b6e66,#14a89a 62%,#4fd6b8)}
+.kk-i{list-style:none;margin:6px 0 8px;padding:0;font-size:14px}
+.kk-i li{display:flex;justify-content:space-between;gap:10px;padding:4px 0;border-bottom:1px dashed var(--line)}
+.kk-lock{display:flex;align-items:center;gap:8px;padding:12px;border-radius:12px;background:var(--bg);color:var(--mut);font-size:14px}
+.kk-lock svg{width:18px;height:18px;flex:none}
+.tchips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tchip{padding:2px 10px;border-radius:999px;font-size:12px;background:var(--bg);color:var(--mut);border:1px solid var(--line)}
+.tchip b{color:var(--ink)}
+.tchip.selesai{border-color:var(--ok)}
+.tchip.dikerjakan{border-color:var(--tag)}
+.bar2{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+.bar2 select{width:auto;min-width:220px}
+.tw{overflow-x:auto}
+.bt{width:100%;border-collapse:collapse;min-width:680px}
+.bt th,.bt td{padding:10px 8px;text-align:left;border-bottom:1px solid var(--line);font-size:14px;vertical-align:middle}
+.bt small{display:block;color:var(--mut);font-size:12px}
+.bt select{width:100%;min-width:170px;min-height:38px}
+.bt input[type=checkbox]{width:18px;height:18px;min-height:0}
+.chk{display:flex;gap:18px;margin:4px 0 6px}
+.chk label{display:flex;align-items:center;gap:8px;margin:0;font-weight:500}
+.chk input{width:auto;min-height:0}
+.stf{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.pc-s{color:var(--acc);font-weight:600}
+@media (max-width:560px){.stf{grid-template-columns:1fr}}

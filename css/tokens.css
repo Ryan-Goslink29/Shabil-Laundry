@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+:root {
+  --bg: #f3f8fb;
+  --surf: #fff;
+  --ink: #14213d;
+  --mut: #576781;
+  --line: #d9e4ee;
+  --acc: #2e6cf6;
+  --accink: #fff;
+  --tag: #f6c945;
+  --tagink: #3a2e00;
+  --blob: #a9d6fb;
+  --ok: #25885b;
+  --err: #be3434;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1526;
+    --surf: #15233b;
+    --ink: #e8eef7;
+    --mut: #9daec6;
+    --line: #263752;
+    --acc: #6ea0ff;
+    --accink: #0a1630;
+    --ok: #4cc58c;
+    --err: #f08080;
+    --blob: #1d3c66;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1526;
+  --surf: #15233b;
+  --ink: #e8eef7;
+  --mut: #9daec6;
+  --line: #263752;
+  --acc: #6ea0ff;
+  --accink: #0a1630;
+  --ok: #4cc58c;
+  --err: #f08080;
+  --blob: #1d3c66;
+  color-scheme: dark;
+}

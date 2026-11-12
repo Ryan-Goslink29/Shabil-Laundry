@@ -1,0 +1,193 @@
+/* Tampilan area kurir (mobile-first, aksen oranye). Dimuat setelah pelanggan.css. */
+#app.kurir-mode {
+  max-width: 640px;
+  padding: 14px 14px 100px;
+}
+.kr-hero {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  border-radius: 24px;
+  padding: 26px 26px 22px;
+  margin: 4px 0 16px;
+  background: linear-gradient(120deg, #b94d05, #f08a24 62%, #ffb259);
+}
+.kr-hero > * {
+  position: relative;
+}
+.kr-hero > .pb {
+  position: absolute;
+}
+.kr-hero .eyebrow {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  opacity: 0.85;
+}
+.kr-hero h1 {
+  margin: 4px 0;
+  font-size: 1.9rem;
+  line-height: 1.15;
+}
+.kr-hero p {
+  margin: 0;
+}
+.kr-pg {
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 16px 0 6px;
+  overflow: hidden;
+}
+.kr-pg i {
+  display: block;
+  height: 100%;
+  background: #fff;
+  border-radius: 4px;
+}
+.kr-hero small {
+  opacity: 0.95;
+}
+.kfs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.kf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 10px 4px;
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  background: var(--surf);
+  cursor: pointer;
+  color: var(--ink);
+  font: inherit;
+}
+.kf b {
+  font-size: 1.3rem;
+  line-height: 1.1;
+}
+.kf span {
+  font-size: 11px;
+  color: var(--mut);
+  text-align: center;
+  line-height: 1.2;
+}
+.kf.on {
+  border-color: #f08a24;
+  background: color-mix(in srgb, #f08a24 10%, var(--surf));
+}
+.kc {
+  background: var(--surf);
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--kc, #f08a24);
+  border-radius: 18px;
+  padding: 16px 18px;
+  margin: 12px 0;
+  box-shadow: 0 6px 18px rgba(20, 33, 61, 0.06);
+}
+.k-Menunggu {
+  --kc: #b8730a;
+}
+.k-Diproses {
+  --kc: #7c5ce7;
+}
+.k-Diantar {
+  --kc: #14a89a;
+}
+.kc-h {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.kb {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  background: color-mix(in srgb, var(--kc) 16%, transparent);
+  color: var(--kc);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.kc-id {
+  font-weight: 700;
+  color: var(--mut);
+  font-size: 13px;
+}
+.kc-n {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.kc-n b {
+  font-size: 1.05rem;
+}
+.kc-ct {
+  display: flex;
+  gap: 8px;
+}
+.kc-a {
+  margin: 8px 0 4px;
+  font-size: 15px;
+}
+.kc-nt {
+  margin: 6px 0;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: color-mix(in srgb, #f08a24 12%, transparent);
+  font-size: 13px;
+}
+.kc-map {
+  display: inline-block;
+  margin: 2px 0 8px;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--acc);
+}
+.kc-i {
+  margin: 0 0 12px;
+  color: var(--mut);
+  font-size: 13px;
+}
+.btn.kc-go {
+  width: 100%;
+  min-height: 54px;
+  font-size: 1rem;
+  border-radius: 14px;
+  background: var(--kc);
+  color: #fff;
+}
+.kr h2 {
+  margin: 22px 0 8px;
+  font-size: 1.1rem;
+}
+.kd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surf);
+  margin: 8px 0;
+  font-size: 14px;
+}
+.kd small {
+  display: block;
+  color: var(--mut);
+}
+.kd .ok {
+  color: var(--ok);
+  font-size: 1.2rem;
+}

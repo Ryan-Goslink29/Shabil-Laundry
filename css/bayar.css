@@ -1,0 +1,42 @@
+/* Pembayaran: pilihan metode, tagihan, verifikasi, dan nota. Dimuat setelah tugas.css dan sebelum glass.css. */
+.pmg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:6px 0 4px}
+.pmo{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:10px;border:2px solid var(--line);border-radius:12px;background:var(--surf);color:var(--ink);cursor:pointer;text-align:left;font:inherit}
+.pmo b{font-size:13px}
+.pmo small{font-size:11px;color:var(--mut);line-height:1.25}
+.pmo.on{border-color:var(--acc);background:color-mix(in srgb,var(--acc) 12%,var(--surf))}
+.pay{margin-top:10px;padding:12px;border-radius:12px;background:var(--bg);font-size:14px;line-height:1.6}
+.pay.ok{border:1px solid var(--ok)}
+.pay-info{margin:8px 0;padding:10px;border:1px dashed var(--line);border-radius:10px;font-weight:600;white-space:pre-line}
+.pay img.bk,.cd img.bk{display:block;width:130px;height:auto;max-height:190px;object-fit:contain;border-radius:10px;background:#fff;margin:8px 0}
+.pay svg.qr{display:block;width:130px;height:130px;border-radius:10px;background:#fff;margin:8px 0}
+.up{display:block;margin:8px 0 0;font-size:13px;font-weight:600}
+.up input{margin-top:6px;font-size:13px}
+.pay-sw{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.pc-b{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.badge.bp-belum{--b:#c88712}
+.badge.bp-menunggu{--b:#7c5ce7}
+.badge.bp-lunas{--b:#25885b}
+.badge.bp-ditolak{--b:#d04a4a}
+.wqs{margin:8px 0}
+.wq-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:6px 0;font-size:14px}
+.wq-row input{width:96px;min-height:40px}
+.kc-bill{margin:8px 0;padding:10px 12px;border-radius:12px;background:color-mix(in srgb,#f08a24 14%,transparent);font-size:14px}
+.cd textarea{width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;background:var(--surf);font:inherit;resize:vertical}
+.rj{flex:1;min-width:160px}
+.nota-wrap{max-width:720px;margin:0 auto}
+.nota-bar{display:flex;gap:10px;justify-content:space-between;margin:8px 0 14px}
+.nota{background:#fff;color:#14213d;border-radius:14px;padding:28px;box-shadow:0 12px 30px rgba(5,25,80,.22);font-size:14px}
+.nota header{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #14213d;padding-bottom:10px;margin-bottom:12px;font-size:1.2rem}
+.nota header span{letter-spacing:.2em;font-weight:700;color:#2e6cf6}
+.nota dl{display:grid;grid-template-columns:120px 1fr;gap:4px 10px;margin:0 0 14px}
+.nota dt{color:#576781}
+.nota dd{margin:0;font-weight:600}
+.nota table{width:100%;border-collapse:collapse}
+.nota th,.nota td{padding:8px 6px;text-align:left;border-bottom:1px solid #d9e4ee;color:#14213d;background:none;font-size:13px}
+.nota th:nth-child(n+3),.nota td:nth-child(n+3){text-align:right}
+.nota-tot{display:flex;justify-content:space-between;align-items:baseline;margin-top:12px;font-size:1.1rem}
+.nota-tot b{font-size:1.5rem}
+.nota-st{margin:12px 0 0;color:#576781}
+.nota footer{margin-top:18px;text-align:center;color:#576781;font-size:12px}
+@media print{body.glass{background:#fff!important;color:#000!important}body.glass::before,body.glass::after{display:none!important}.no-print{display:none!important}#app{max-width:none!important;padding:0!important}.nota{box-shadow:none;padding:0}}
+@media (max-width:560px){.pmg{grid-template-columns:1fr}}
